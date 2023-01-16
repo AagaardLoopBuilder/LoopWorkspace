@@ -1,8 +1,9 @@
 name: Build Loop
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '10 20 16 */2 *' # Runs at 17:00 UTC on the 1st in Jan, Mar, May, Jul, Sep and Nov.
+    - cron: '20 20 16 */2 *' # Runs at 17:00 UTC on the 1st in Jan, Mar, May, Jul, Sep and Nov.
+  workflow_dispatch:
+
 
 jobs:
   build:
