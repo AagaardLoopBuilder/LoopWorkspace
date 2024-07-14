@@ -1,8 +1,6 @@
 name: 4. Build Loop
 run-name: Build Loop (${{ github.ref_name }})
 on:
-  schedule:
-    - cron: '20 00 1,15 * *'
   workflow_dispatch:
   
   ## Remove the "#" sign from the beginning of the line below to get automated builds on push (code changes in your repository)
@@ -17,7 +15,6 @@ env:
   UPSTREAM_BRANCH: ${{ github.ref_name }} # branch on upstream repository to sync from (replace with specific branch name if needed)
   TARGET_BRANCH: ${{ github.ref_name }} # target branch on fork to be kept in sync, and target branch on upstream to be kept alive (replace with specific branch name if needed)
   ALIVE_BRANCH: alive
-
 
 jobs:
   validate:
